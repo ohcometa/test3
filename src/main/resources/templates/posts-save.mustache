@@ -1,0 +1,40 @@
+{{>layout/header}}
+<h1>게시글 등록</h1>
+<div class="col-md-12">
+    <!--    div는 화면에 얼마만큼 차지를 할 것인가를 뜻함.
+    col:column, md:middle사이즈(모니터기준. 992px 이상) 12:가로폭을 12개로 쪼개 쓸것이다.
+    컬럼:열(세로) 로우:행(가로)-->
+    <div class="col-md-4">
+        <form>
+<!--            row가 아닌 form으로 들어가서 일종의 테이블 처럼 들어간다-->
+            <div class="form-group">
+                <label for="title">제목</label>
+                <input type="text" class="form-control" id="title" placeholder="제목을 입력하세요">
+<!--                for : label 이름. 더 정확히는 이 이름이 변수 이름과 관련이 있다는 걸 보여주기 위해 변수 이름과 똑같이 씀-->
+<!--                제목 : 화면에 "제목"이라 뜨게 함-->
+<!--                type : 사용자에게 text로 입력을 받을 것이다.-->
+<!--                class : form 안에 들어가는 control이다-->
+<!--                id : 실제로 저장될때 쓰이는 변수이름-->
+<!--                placeholder : 입력칸에 안내문 뜨는거 뭐 뜨게 할까-->
+            </div>
+            <div class="form-group">
+                <label for="author">작성자</label>
+                <input type="text" class="form-control" id="author" placeholder="작성자를 입력하세요">
+            </div>
+            <div class="form-group">
+                <label for="content">내용</label>
+                <textarea class="form-control" id="content" placeholder="내용을 입력하세요"></textarea>
+<!--                textarea : text와는 다르게 여러줄을 입력받고 싶을때 씀.-->
+<!--                input text 하지 않고 그냥 textarea로 바로 들어간다는 것도 알아둬야 할 점-->
+<!--                여러줄 들어가는 건 input 타입으로 받을 수 없기 때문-->
+            </div>
+        </form>
+        <a href="/" role="button" class="btn btn-secondary">취소</a>
+<!--        href 뒤에 "/"를 넣어 취소 버튼 누르면 다시 루트로 돌아가라는 것-->
+        <button type="button" class="btn btn-primary" id="btn-save">등록</button>
+        <!--        버튼 만드는 태그. a는 링크에 해당하는 것, href 다음에 경로는 버튼 눌렀을때 그 경로로 간다는 것-->
+        <!--                id : 실제로 저장될때 쓰이는 변수이름-->
+        <!--        btn-primary는 파란색버튼을 의미-->
+    </div>
+</div>
+{{>layout/footer}}

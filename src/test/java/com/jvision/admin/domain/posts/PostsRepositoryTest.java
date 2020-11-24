@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@RunWith(SpringRunner.class) //테스트 할 것을 유닛 단위로 연결해주는 어노테이션
+@RunWith(SpringRunner.class) //테스트 할 것을 유닛 단위로 연결해주는 어노테이션2
 @SpringBootTest
 
 public class PostsRepositoryTest {

@@ -33,7 +33,7 @@ public void 게시글저장_불러오기(){
     postsRepository.save(Posts.builder()
             .title(title)
             .content(content)
-            .author("grizzzzzly55@gmail.com")
+            .author("2grizzzzzly55@gmail.com")
             .build()
     );
 

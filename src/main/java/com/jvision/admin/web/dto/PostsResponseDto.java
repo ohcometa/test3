@@ -2,6 +2,7 @@ package com.jvision.admin.web.dto;
 
 import com.jvision.admin.domain.posts.Posts;
 import lombok.Getter;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Getter //롬복에 Getter 사용해서 받는걸 쉽게
 public class PostsResponseDto {  //조회하는 클래스

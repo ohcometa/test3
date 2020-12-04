@@ -29,7 +29,7 @@ public class PostsRepositoryTest {
 public void 게시글저장_불러오기(){
     String title="테스트 게시글";
     String content="테스트 본문";
-    //insert into Posts values("", "", "" ~~~~~) <- 원래 sql문
+    //insert into Posts values("", "", "" ~~~~~) <- 원래라면 이런 sql문으로 썼을 것이다.
     postsRepository.save(Posts.builder()
             .title(title)
             .content(content)

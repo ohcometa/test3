@@ -31,3 +31,4 @@ public class PostsApiController {
         return postsService.findById(id); // 서비스에 id 껴서 넘겨라
     }
 }
+// p11-1 14:30 update() : 클라이언트 수정 요청, findById():삭제 요청 메소드

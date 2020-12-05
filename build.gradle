@@ -37,7 +37,8 @@ dependencies {
     //
 
     compile('org.springframework.boot:spring-boot-starter-mustache')
-
+    compile('org.springframework.boot:spring-boot-starter-oauth2-client')
+    //소셜로그인 구현시 필요 p12-2
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

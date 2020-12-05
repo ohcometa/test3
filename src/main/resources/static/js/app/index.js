@@ -4,16 +4,19 @@ var main = { //js는 타입이 없어서 그냥 변수앞에 var를 쓴다
    init : function () { //function은 함수. 이 js파일엔 함수가 4개 있는것
        var _this = this;
        $('#btn-save').on('click', function () { // btn-save 앞에 #이 꼭 붙어야됨. id 이기 때문
-           _this.save(); //btn-save가 click 됬을때, save 함수가 실행이 된다.
+        _this.save(); //btn-save가 click 됬을때, save 함수가 실행이 된다.
        })
-       $('#btn-update').on('click', function () { //p11-2 에서 추가 15분경
-                  _this.update();
-              })
-       $('#btn-delete').on('click', function () { //p11-3 에서 추가 25:30
-                                _this.delete();
-       }); //원칙상 function 끝나는 부분에 세미콜론 해야함 p11-3 24:05
 
+       $('#btn-update').on('click', function () { //p11-2 에서 추가 15분경
+        _this.update();
+       })
+
+       $('#btn-delete').on('click', function () { //p11-3 에서 추가 25:30
+        _this.delete();
+       }); //원칙상 function 끝나는 부분에 세미콜론 해야함 p11-3 24:05
    },
+
+
    save : function () {
        var data = {
            title : $("#title").val(),
@@ -58,7 +61,7 @@ var main = { //js는 타입이 없어서 그냥 변수앞에 var를 쓴다
           })
       },
 
-      update : delete () { //p11-3 24:18분 경
+      delete : function () { //p11-3 24:18분 경
       // delete는 화면에 나타내야되는게 암것도 없음. 그냥 삭제됬다고 하면 됨
       // 그래서 var data 없어짐
         var id = $("#id").val(); //키값인 id는 있어야 해당하는 데이터를 삭제할수있으니 var id는 남김
@@ -69,7 +72,7 @@ var main = { //js는 타입이 없어서 그냥 변수앞에 var를 쓴다
 
             dataType : 'json',
             contentType : 'application/json; charset=utf-8'
-            //여기도 data에 해당되는건 필요 없
+            //여기도 data에 해당되는건 필요 없음
 
         }).done(function () { //위에 것이 제대로 들어가게 되면 done 실행
             alert('글이 삭제되었습니다.');

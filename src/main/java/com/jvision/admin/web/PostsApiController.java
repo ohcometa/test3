@@ -31,5 +31,12 @@ public class PostsApiController {
         return postsService.findById(id); // 서비스에 id 껴서 넘겨라
     }
 
+    @DeleteMapping("api/v1/posts/{id}") //p11-3 8분경
+    public Long delete(@PathVariable Long id) //실제 key값인 id를 받아오려면 @PathVariable 필요
+    {
+        postsService.delete(id); //이 delete 메소드는 postsService에 response하고 그걸 통해서 jpa repository에 전송할수 있도록 줘야함
+                                 //어떤 값을 삭제할지에 대한 키값이 반드시 전송이 같이 되야함
+        return id;
+    }
 }
 // p11-1 14:30 update() : 클라이언트 수정 요청, findById():삭제 요청 메소드

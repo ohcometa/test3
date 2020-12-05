@@ -55,5 +55,13 @@ public class PostsService {
         //생성된 객체를 자바가 기본 제공하는 Collectors의 toList 함수를 이용해 list로 모아서 반환
     }
 
+    @Transactional //p11-3 17분경에 마무리됨
+    public void delete(Long id)
+    {
+        Posts posts = postsRepository.findById(id) // SQL문 "delete from posts where id가 무엇인 번호" 가 실행 되도록 만들어 달라
+                .orElseThrow(()->new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
+        postsRepository.delete(posts); //리퍼지토리에 딜리트 씨퀄문을 뿌려라. postRepository엔 delete에 해당되는 쿼리는 미리 작성 되어있음
+    }
+
 
 }

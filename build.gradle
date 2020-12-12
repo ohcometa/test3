@@ -41,4 +41,7 @@ dependencies {
     //소셜로그인 구현시 필요 p12-2
 
     testCompile('org.springframework.boot:spring-boot-starter-test')
+
+    compile('org.springframework.session:spring-session-jdbc')
+//    p14-1 8:30 쯤 등록함
 }

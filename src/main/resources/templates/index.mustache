@@ -30,6 +30,8 @@
        컬럼:열(세로) 로우:행(가로)-->
 
     <div class="row">
+        <div class="col-md-6">
+<!--            <div class="col-md-6">를 추가하니까 글 등록 버튼과 구글로그인 버튼이 붙어있던게 한칸 떨어져서 나옴-->
         <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
         <!--        버튼 만드는 태그. a는 링크에 해당하는 것, href 다음에 경로는 버튼 눌렀을때 그 경로로 간다는 것-->
         <!--        btn-primary는 파란색버튼을 의미-->
@@ -37,7 +39,7 @@
         {{#userName}}
 <!--            userName이 있다면 어떻게 할것이냐-->
             Logged in as : <span id="user">{{userName}}</span>
-            <a href="/logout" class="btn btn-info active" role="button">Logout<</a>
+            <a href="/logout" class="btn btn-info active" role="button">Logout</a>
         {{/userName}}
         {{^userName}}
 <!--            userName이 없다면?-->

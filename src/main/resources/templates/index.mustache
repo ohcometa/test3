@@ -28,11 +28,24 @@
     <!--    div는 화면에 얼마만큼 차지를 할 것인가를 뜻함.
        col:column, md:middle사이즈(모니터기준. 992px 이상) 12:가로폭을 12개로 쪼개 쓸것이다.
        컬럼:열(세로) 로우:행(가로)-->
+
     <div class="row">
         <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
-<!--        버튼 만드는 태그. a는 링크에 해당하는 것, href 다음에 경로는 버튼 눌렀을때 그 경로로 간다는 것-->
-<!--        btn-primary는 파란색버튼을 의미-->
-<!--        a 태그 사이에 넣은 "글 등록"이 그 버튼에 나타나는 글자가 됨-->
+        <!--        버튼 만드는 태그. a는 링크에 해당하는 것, href 다음에 경로는 버튼 눌렀을때 그 경로로 간다는 것-->
+        <!--        btn-primary는 파란색버튼을 의미-->
+        <!--        a 태그 사이에 넣은 "글 등록"이 그 버튼에 나타나는 글자가 됨-->
+        {{#userName}}
+<!--            userName이 있다면 어떻게 할것이냐-->
+            Logged in as : <span id="user">{{userName}}</span>
+            <a href="/logout" class="btn btn-info active" role="button">Logout<</a>
+        {{/userName}}
+        {{^userName}}
+<!--            userName이 없다면?-->
+            <a href="/oauth2/authorization/google" class="btn btn-success active" role="button">Google Login</a>
+        {{/userName}}
+    </div>
+<!--    p13-2 23:13 구글 로그인 버튼 추가-->
+
     </div>
 
 <br>

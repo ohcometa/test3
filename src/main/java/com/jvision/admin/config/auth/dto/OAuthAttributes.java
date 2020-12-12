@@ -64,6 +64,7 @@ public class OAuthAttributes {
     //여기까지 작성하고 이 OauthAttributes 창에서 Application 실행하면 오류뜨는데,
     //기능은 정상적으로 다 작동한다
     //웃기게 다른 창. 예를 들어 index.mustache 창에서 Application 을 실행하면 그 오류가 안뜬다.
+    //아예 오류 없애고 싶으면 https://www.oops4u.com/2240 참고해보자.
 
 
 
